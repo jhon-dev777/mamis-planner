@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/groups"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Categoria: {{category}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div>
+    <h1>Detalles de la Nota</h1>
+    <p>ID de la Nota: {{ noteId }}</p>
+  </div> -->
+  <ion-list>
+    <ion-item *ngFor="let item of notes.notes">
+      <ion-label>{{item}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-modal [isOpen]="openModalNote" (willDismiss)="cancel()">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-button (click)="cancel()">Cancel</ion-button>
+          </ion-buttons>
+          <ion-title>Nueva nota</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding">
+        <ion-item>
+          <ion-textarea [(ngModel)]="description" labelPlacement="floating" fill="solid"
+            label="descripcion"></ion-textarea>
+        </ion-item>
+      </ion-content>
+
+    </ng-template>
+  </ion-modal>
+  <ion-button (click)="onClickModal()" style="position: absolute; right: 20px; bottom: 43px;" shape="round">
+    <ion-icon name="add"></ion-icon>
+  </ion-button>
+</ion-content>
