@@ -5,7 +5,8 @@ export interface NoteDetail {
     notes: Note[]
 }
 export interface Note {
-    description: string;
-    date: String;
+    description?: string;
+    date: string;
     status: NoteStatus;
+    data?: string;
 }

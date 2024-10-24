@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { library, add, home, calendar } from 'ionicons/icons';  // Import specific icons
+import { library, add, home, calendar, cameraOutline, pencilOutline, micOutline, trashOutline, hammerOutline, heartCircleOutline } from 'ionicons/icons';  // Import specific icons
 import { Category } from './shared/models/category.model';
 
 @Component({
@@ -23,7 +23,13 @@ export class AppComponent {
       'home': home,
       'library': library,
       'add': add,
-      'calendar': calendar
+      'camera-outline': cameraOutline,
+      "pencil-outline": pencilOutline,
+      "mic-outline": micOutline,
+      'calendar': calendar,
+      "trash-outline": trashOutline,
+      "hammer-outline": hammerOutline,
+      "heart": heartCircleOutline
     });
   }
 }

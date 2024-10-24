@@ -1,3 +1,20 @@
-<p>
-  calendar works!
-</p>
+<ion-content>
+  <div style=" display: flex;
+  flex-direction: column; /* Alinear los botones verticalmente */
+  justify-content: center; /* Centrar los botones verticalmente */
+  align-items: center;     /* Centrar los botones horizontalmente */
+  height: 100vh;   ">
+    <ion-button (click)="goToCalendar()" expand="block" fill="clear" shape="round">
+      Abrir calendario
+    </ion-button>
+    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+      Baners & Stickers
+    </ion-button>
+    <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
+      Agregar un Tip
+    </ion-button>
+    <ion-button (click)="clearLocalStorage()" expand="block" fill="clear" shape="round">
+      Borrar registros
+    </ion-button>
+  </div>
+</ion-content>

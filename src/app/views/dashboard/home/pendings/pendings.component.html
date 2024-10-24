@@ -1,4 +1,4 @@
-<ion-card *ngFor="let item of pendingsList.notes">
+<ion-card *ngFor="let item of pendingsList?.notes">
   <ion-card-header>
     <ion-card-title>{{item?.description}}</ion-card-title>
     <ion-card-subtitle>{{item?.date | dateFormat}}</ion-card-subtitle>

@@ -8,3 +8,37 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 /* @import "@ionic/angular/css/palettes/light.system.css"; */
+:root {
+    --ion-color-primary: #f74b57; /* Color rojo del corazón */
+    --ion-color-primary-rgb: 247, 75, 87;
+    
+    --ion-color-secondary: #fde3df; /* Color rosado del fondo */
+    --ion-color-secondary-rgb: 253, 227, 223;
+    
+    --ion-color-tertiary: #f74b57; /* Color del texto */
+    --ion-color-tertiary-rgb: 247, 75, 87;
+  
+    --ion-color-light: #fde3df; /* Color rosado claro para fondos */
+    --ion-color-light-rgb: 253, 227, 223;
+    
+    --ion-color-dark: #4a4a4a; /* Color oscuro para texto o detalles menores */
+    --ion-color-dark-rgb: 74, 74, 74;
+    
+    /* Fondo principal de la aplicación */
+    --ion-background-color: #fde3df;
+    --ion-text-color: #000000; /* Color para el texto principal */
+  }
+  
+  .ion-color-primary {
+    --ion-color-base: #f74b57;
+    --ion-color-base-rgb: 247, 75, 87;
+    --ion-color-contrast: #ffffff;
+    --ion-color-contrast-rgb: 255, 255, 255;
+  }
+  
+  .ion-color-secondary {
+    --ion-color-base: #fde3df;
+    --ion-color-base-rgb: 253, 227, 223;
+    --ion-color-contrast: #f74b57;
+    --ion-color-contrast-rgb: 247, 75, 87;
+  }
