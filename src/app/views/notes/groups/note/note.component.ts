@@ -1,9 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent, NavController, IonButton, IonIcon, IonDatetimeButton, IonItem, IonLabel, IonInput, IonTextarea, IonModal, IonList } from "@ionic/angular/standalone";
-import { NoteDetail } from '../../../../shared/models/note-detail.model';
+import { Note, NoteDetail } from '../../../../shared/models/note-detail.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NoteStatus } from '../../../../shared/enums/note-status.enum';
 
 @Component({
   selector: 'app-note',
@@ -55,7 +56,8 @@ export class NoteComponent  implements OnInit {
     if(this.modal){
       this.modal.dismiss(this.description, 'confirm');
       if( this.description) {
-        this.notes.notes.push(this.description)
+        const payload:Note = {status: NoteStatus.active, description: this.description, date: new Date().toISOString()}
+        this.notes.notes.push(payload)
         localStorage.setItem(this.noteId.toString(), JSON.stringify(this.notes))
         this.description = "";
       }

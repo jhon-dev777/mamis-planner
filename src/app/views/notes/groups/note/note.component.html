@@ -14,7 +14,7 @@
   </div> -->
   <ion-list>
     <ion-item *ngFor="let item of notes.notes">
-      <ion-label>{{item}}</ion-label>
+      <ion-label>{{item.description}}</ion-label>
     </ion-item>
   </ion-list>
   <ion-modal [isOpen]="openModalNote" (willDismiss)="cancel()">

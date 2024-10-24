@@ -1,7 +1,11 @@
+import { NoteStatus } from "../enums/note-status.enum";
+
 export interface NoteDetail {
     title: string;
-    notes: string[]
+    notes: Note[]
 }
 export interface Note {
-    description: string
+    description: string;
+    date: String;
+    status: NoteStatus;
 }
