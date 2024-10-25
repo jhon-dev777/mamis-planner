@@ -1,13 +1,14 @@
 <ion-card *ngFor="let item of pendingsList?.notes">
   <ion-card-header>
-    <ion-card-title>{{item?.description}}</ion-card-title>
+    Categoria:{{pendingsList?.title}}
+    <br>
+    <ion-card-subtitle>Estado: {{item?.status}}</ion-card-subtitle>
     <ion-card-subtitle>{{item?.date | dateFormat}}</ion-card-subtitle>
   </ion-card-header>
 
   <ion-card-content>
-    Categoria:{{pendingsList?.title}}
-    <br>
-    <ion-label>Estado: {{item?.status}}</ion-label>
-    
+
+    <ion-label *ngIf="item?.description">{{item?.description}}</ion-label>
+    <ion-img *ngIf="item?.data" [src]="item?.data" style="max-width: 80px;"></ion-img>
   </ion-card-content>
 </ion-card>

@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, IonTabs } from '@ionic/angular';
 import { addIcons } from 'ionicons';
 import { library, add, home, calendar, cameraOutline, pencilOutline, micOutline, trashOutline, hammerOutline, heartCircleOutline } from 'ionicons/icons';  // Import specific icons
 import { Category } from './shared/models/category.model';
+import { FootbarComponent } from './shared/components/footbar/footbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, IonicModule],
+  imports: [RouterOutlet, FootbarComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.sass'
 })

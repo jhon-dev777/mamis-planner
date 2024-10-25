@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
-import { IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonLabel, IonContent } from "@ionic/angular/standalone";
+import { IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonCardSubtitle, IonLabel, IonContent, IonImg } from "@ionic/angular/standalone";
 import { DateFormatPipe } from '../../../../shared/pipes/date-format.pipe';
 
 @Component({
@@ -8,7 +8,7 @@ import { DateFormatPipe } from '../../../../shared/pipes/date-format.pipe';
   templateUrl: './pendings.component.html',
   styleUrls: ['./pendings.component.scss'],
   standalone: true,
-  imports: [IonContent, IonLabel, IonCardSubtitle, IonCardContent, IonCardTitle, IonCardHeader, IonCard, CommonModule, DateFormatPipe],
+  imports: [IonImg, IonContent, IonLabel, IonCardSubtitle, IonCardContent, IonCardTitle, IonCardHeader, IonCard, CommonModule, DateFormatPipe],
 })
 export class PendingsComponent  implements OnInit,OnChanges {
   public category: any;
