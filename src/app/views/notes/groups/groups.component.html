@@ -2,6 +2,7 @@
   <div *ngFor="let item of groups">
     <app-category [category]="item"></app-category>
   </div>
+  <ion-title *ngIf="groups.length < 1" class="empty"><ion-note style="white-space: normal;">Puedes agregar nuevas categorias</ion-note></ion-title>
   <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
     <ng-template>
       <ion-header>

@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { CategoryComponent } from './category/category.component';
 import { CommonModule } from '@angular/common';
-import { IonButton, IonIcon, IonModal, IonHeader, IonToolbar, IonButtons, IonTitle, IonContent, IonItem, IonInput, IonList, IonTextarea, IonLabel, IonDatetime, IonDatetimeButton } from "@ionic/angular/standalone";
+import { IonButton, IonIcon, IonModal, IonHeader, IonToolbar, IonButtons, IonTitle, IonContent, IonItem, IonInput, IonList, IonTextarea, IonLabel, IonDatetime, IonDatetimeButton, IonNote } from "@ionic/angular/standalone";
 import { Category } from '../../../shared/models/category.model';
 import { OverlayEventDetail } from '@ionic/core/components';
 import { FormsModule } from '@angular/forms';
@@ -22,7 +22,7 @@ import { ColorPickerModule } from 'ngx-color-picker';
       ]),
     ]),
   ],
-  imports: [ColorPickerModule , CommonModule, IonDatetimeButton, IonDatetime, IonLabel,  FormsModule, IonTextarea, IonList, IonInput, IonItem, IonContent, IonTitle, IonButtons, IonToolbar, IonHeader, IonModal, IonIcon, IonButton, CategoryComponent],
+  imports: [IonNote, ColorPickerModule , CommonModule, IonDatetimeButton, IonDatetime, IonLabel,  FormsModule, IonTextarea, IonList, IonInput, IonItem, IonContent, IonTitle, IonButtons, IonToolbar, IonHeader, IonModal, IonIcon, IonButton, CategoryComponent],
   standalone: true,
 })
 

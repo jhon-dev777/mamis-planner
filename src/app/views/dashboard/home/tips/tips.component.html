@@ -3,7 +3,10 @@
     <ion-card-title>{{tip?.title}}</ion-card-title>
   </ion-card-header>
 
-  <ion-card-content>
+  <ion-card-content style="margin-right: 3px;">
     {{tip?.description}}
+    <ion-fab-button (click)="onClick()" size="small" style="position: absolute; right: 0px; bottom: 5px;">
+      <ion-icon [name]="iconName"></ion-icon>
+    </ion-fab-button>
   </ion-card-content>
 </ion-card>

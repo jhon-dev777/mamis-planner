@@ -17,22 +17,24 @@
       <ion-card>
         <ion-card-header>
           <!-- <ion-card-title *ngIf="item.description">{{item.description}}</ion-card-title> -->
-          <ion-card-subtitle>Fecha de Inicio: {{item?.date || "" | dateFormat }}</ion-card-subtitle>
+          <ion-card-subtitle style="margin-right: 15px;">Fecha de Inicio: {{item?.date || "" | dateFormat }}</ion-card-subtitle>
           <div style="width: 100%;">
-            <ion-button fill="clear" (click)="removeElement(i)" style="width: 30px; position: absolute; right: 0px;">
+            <ion-button fill="clear" (click)="removeElement(i)" style="width: 30px; position: absolute; right: 5px;">
               <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
             </ion-button>
           </div>
         </ion-card-header>
-      
-        <ion-card-content >
+
+        <ion-card-content>
           <img *ngIf="item.data" [src]="item.data" alt="Image Preview" style="max-width: 300px; max-height: 300px;" />
           <ion-label *ngIf="item.description">{{item.description}}</ion-label>
         </ion-card-content>
       </ion-card>
       <!-- <img *ngIf="item.data" [src]="item.data" alt="Image Preview" style="max-width: 300px; max-height: 300px;" /> -->
     </ion-item>
+    
   </ion-list>
+  <ion-title *ngIf="notes.notes.length < 1" class="empty"><ion-note style="white-space: normal;">Puedes agregar nuevas notas</ion-note></ion-title>
   <ion-modal [isOpen]="openModalNote" (willDismiss)="cancel()">
     <ng-template>
       <ion-header>
@@ -66,15 +68,15 @@
 </ion-content>
 <div>
   <ion-button (click)="onClickModalText()" fill="outline" style="position: absolute; right: 20px; bottom: 43px;"
-  shape="round">
-  <ion-icon name="pencil-outline"></ion-icon>
-</ion-button>
-<ion-button (click)="onClickModalImage()" fill="outline" style="position: absolute; right: 100px; bottom: 43px;"
-  shape="round">
-  <ion-icon name="camera-outline"></ion-icon>
-</ion-button>
-<ion-button (click)="onClickModalVoice()" fill="outline" style="position: absolute; right: 180px; bottom: 43px;"
-  shape="round">
-  <ion-icon name="mic-outline"></ion-icon>
-</ion-button>
+    shape="round">
+    <ion-icon name="pencil-outline"></ion-icon>
+  </ion-button>
+  <ion-button (click)="onClickModalImage()" fill="outline" style="position: absolute; right: 100px; bottom: 43px;"
+    shape="round">
+    <ion-icon name="camera-outline"></ion-icon>
+  </ion-button>
+  <ion-button (click)="onClickModalVoice()" fill="outline" style="position: absolute; right: 180px; bottom: 43px;"
+    shape="round">
+    <ion-icon name="mic-outline"></ion-icon>
+  </ion-button>
 </div>

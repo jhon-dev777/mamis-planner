@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { IonicModule, IonTabs } from '@ionic/angular';
 import { addIcons } from 'ionicons';
-import { library, add, home, calendar, cameraOutline, pencilOutline, micOutline, trashOutline, hammerOutline, heartCircleOutline } from 'ionicons/icons';  // Import specific icons
+import { library, add, home, calendar, cameraOutline, pencilOutline, micOutline, trashOutline, hammerOutline, heartCircleOutline, heartCircle } from 'ionicons/icons';  // Import specific icons
 import { Category } from './shared/models/category.model';
 import { FootbarComponent } from './shared/components/footbar/footbar.component';
 
@@ -30,7 +30,8 @@ export class AppComponent {
       'calendar': calendar,
       "trash-outline": trashOutline,
       "hammer-outline": hammerOutline,
-      "heart": heartCircleOutline
+      "heart": heartCircleOutline,
+      "heart-out": heartCircle,
     });
   }
 }

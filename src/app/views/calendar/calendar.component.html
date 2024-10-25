@@ -4,12 +4,15 @@
   justify-content: center; /* Centrar los botones verticalmente */
   align-items: center;     /* Centrar los botones horizontalmente */
   height: 100vh;   ">
-    <ion-button (click)="goToCalendar()" expand="block" fill="clear" shape="round">
+    <ion-button id="present-alert" expand="block" fill="clear" shape="round">
       Abrir calendario
     </ion-button>
+    <ion-alert trigger="present-alert" header="Calendario"
+      message="Esta funcion se agregara pronto" [buttons]="alertButtons"></ion-alert>
     <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
       Baners & Stickers
     </ion-button>
+    <ion-img [src]="image"></ion-img>
     <ion-button (click)="onClick()" expand="block" fill="clear" shape="round">
       Agregar un Tip
     </ion-button>

@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent, NavController, IonButton, IonIcon, IonDatetimeButton, IonItem, IonLabel, IonInput, IonTextarea, IonModal, IonList, IonCardHeader, IonCard, IonCardTitle, IonCardSubtitle, IonCardContent } from "@ionic/angular/standalone";
+import { IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonContent, NavController, IonButton, IonIcon, IonDatetimeButton, IonItem, IonLabel, IonInput, IonTextarea, IonModal, IonList, IonCardHeader, IonCard, IonCardTitle, IonCardSubtitle, IonCardContent, IonNote } from "@ionic/angular/standalone";
 import { Note, NoteDetail } from '../../../../shared/models/note-detail.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -12,7 +12,7 @@ import { DateFormatPipe } from "../../../../shared/pipes/date-format.pipe";
   templateUrl: './note.component.html',
   styleUrls: ['./note.component.scss'],
   standalone: true,
-  imports: [IonCardContent, IonCardSubtitle, IonCardTitle, IonCard, IonCardHeader, IonList, IonModal, IonTextarea, IonInput, IonLabel, IonItem, IonDatetimeButton, IonIcon, IonButton, IonContent, IonTitle, IonBackButton, IonButtons, IonToolbar, IonHeader, CommonModule, FormsModule, DateFormatPipe]
+  imports: [IonNote, IonCardContent, IonCardSubtitle, IonCardTitle, IonCard, IonCardHeader, IonList, IonModal, IonTextarea, IonInput, IonLabel, IonItem, IonDatetimeButton, IonIcon, IonButton, IonContent, IonTitle, IonBackButton, IonButtons, IonToolbar, IonHeader, CommonModule, FormsModule, DateFormatPipe]
 })
 export class NoteComponent  implements OnInit {
   @ViewChild(IonModal) modal: IonModal | undefined;
